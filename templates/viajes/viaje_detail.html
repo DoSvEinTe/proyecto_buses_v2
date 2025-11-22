@@ -99,7 +99,7 @@
                 </p>
                 <p><strong>Ocupación:</strong> 
                     <div class="progress" style="height: 20px;">
-                        <div class="progress-bar bg-{% if viaje.get_pasajeros_count >= viaje.bus.capacidad_pasajeros %}danger{% elif viaje.get_pasajeros_count >= viaje.bus.capacidad_pasajeros|floatformat:0|mul:0.8 %}warning{% else %}success{% endif %}" 
+                        <div class="progress-bar bg-{% if viaje.get_pasajeros_count >= viaje.bus.capacidad_pasajeros %}danger{% else %}success{% endif %}" 
                              role="progressbar" 
                              style="width: {% widthratio viaje.get_pasajeros_count viaje.bus.capacidad_pasajeros 100 %}%"
                              aria-valuenow="{{ viaje.get_pasajeros_count }}" 

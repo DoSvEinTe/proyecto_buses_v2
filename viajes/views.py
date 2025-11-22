@@ -18,7 +18,7 @@ class ViajeForm(ModelForm):
         fields = [
             'bus', 'conductor', 'lugar_origen', 'lugar_destino',
             'fecha_salida', 'fecha_llegada_estimada', 'fecha_llegada_real',
-            'estado', 'pasajeros_confirmados', 'observaciones'
+            'estado', 'observaciones'
         ]
         widgets = {
             'bus': forms.Select(attrs={'class': 'form-control'}),
@@ -41,11 +41,6 @@ class ViajeForm(ModelForm):
                 'placeholder': 'Fecha y hora real de llegada (opcional)'
             }),
             'estado': forms.Select(attrs={'class': 'form-control'}),
-            'pasajeros_confirmados': forms.NumberInput(attrs={
-                'class': 'form-control',
-                'min': '0',
-                'placeholder': 'Número de pasajeros confirmados'
-            }),
             'observaciones': forms.Textarea(attrs={
                 'class': 'form-control',
                 'rows': 3,

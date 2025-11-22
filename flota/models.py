@@ -12,10 +12,11 @@ class Bus(models.Model):
     ]
     
     placa = models.CharField(max_length=20, unique=True)  # SE MANTIENE PLACA
-    marca = models.CharField(max_length=50, blank=True, null=True)  # Nuevo campo
+    marca = models.CharField(max_length=50)  # Campo obligatorio
     modelo = models.CharField(max_length=100)
     año_fabricacion = models.IntegerField()
     capacidad_pasajeros = models.IntegerField()
+    kilometraje_inicial = models.IntegerField(default=0)
     numero_chasis = models.CharField(max_length=50, unique=True)  # Aumentado a 50
     numero_motor = models.CharField(max_length=30, unique=True, blank=True, null=True)
     estado = models.CharField(max_length=20, choices=ESTADO_CHOICES, default='activo')

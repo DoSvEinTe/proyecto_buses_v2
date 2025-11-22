@@ -4,14 +4,15 @@ from .models import Mantenimiento, DocumentoVehiculo, Bus
 class BusForm(forms.ModelForm):
     class Meta:
         model = Bus
-        fields = ['placa', 'marca', 'modelo', 'año_fabricacion', 'capacidad_pasajeros', 
-                 'numero_chasis', 'numero_motor', 'estado', 'fecha_adquisicion']
+        fields = ['placa', 'marca', 'modelo', 'año_fabricacion', 'capacidad_pasajeros', 'kilometraje_inicial',
+             'numero_chasis', 'numero_motor', 'estado', 'fecha_adquisicion']
         widgets = {
             'placa': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ej: ABC-1234'}),
             'marca': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ej: Mercedes Benz'}),
             'modelo': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Ej: O500RS'}),
             'año_fabricacion': forms.NumberInput(attrs={'class': 'form-control', 'min': 1990, 'max': 2030}),
             'capacidad_pasajeros': forms.NumberInput(attrs={'class': 'form-control', 'min': 10, 'max': 100}),
+            'kilometraje_inicial': forms.NumberInput(attrs={'class': 'form-control', 'min': 0}),
             'numero_chasis': forms.TextInput(attrs={'class': 'form-control'}),
             'numero_motor': forms.TextInput(attrs={'class': 'form-control'}),
             'estado': forms.Select(attrs={'class': 'form-select'}),

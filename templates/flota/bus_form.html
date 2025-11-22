@@ -45,6 +45,20 @@
                         </div>
                         
                         <div class="col-md-6 mb-3">
+                            <label for="{{ form.marca.id_for_label }}" class="form-label">
+                                <strong>Marca *</strong>
+                            </label>
+                            {{ form.marca }}
+                            {% if form.marca.errors %}
+                                <div class="text-danger small">
+                                    {{ form.marca.errors }}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
                             <label for="{{ form.modelo.id_for_label }}" class="form-label">
                                 <strong>Modelo *</strong>
                             </label>
@@ -55,9 +69,7 @@
                                 </div>
                             {% endif %}
                         </div>
-                    </div>
-                    
-                    <div class="row">
+                        
                         <div class="col-md-6 mb-3">
                             <label for="{{ form.año_fabricacion.id_for_label }}" class="form-label">
                                 <strong>Año de Fabricación *</strong>
@@ -69,7 +81,9 @@
                                 </div>
                             {% endif %}
                         </div>
-                        
+                    </div>
+                    
+                    <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="{{ form.capacidad_pasajeros.id_for_label }}" class="form-label">
                                 <strong>Capacidad de Pasajeros *</strong>
@@ -78,6 +92,18 @@
                             {% if form.capacidad_pasajeros.errors %}
                                 <div class="text-danger small">
                                     {{ form.capacidad_pasajeros.errors }}
+                                </div>
+                            {% endif %}
+                        </div>
+                        
+                        <div class="col-md-6 mb-3">
+                            <label for="{{ form.kilometraje_inicial.id_for_label }}" class="form-label">
+                                <strong>Kilometraje Inicial (km) *</strong>
+                            </label>
+                            {{ form.kilometraje_inicial }}
+                            {% if form.kilometraje_inicial.errors %}
+                                <div class="text-danger small">
+                                    {{ form.kilometraje_inicial.errors }}
                                 </div>
                             {% endif %}
                         </div>

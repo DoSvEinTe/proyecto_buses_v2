@@ -29,9 +29,7 @@
                 {% for viaje in viajes %}
                 <tr>
                     <td>
-                        <a href="{% url 'viajes:viaje_detail' viaje.pk %}" class="text-decoration-none">
-                            {{ viaje.bus.placa }}
-                        </a>
+                        {{ viaje.bus.placa }}
                     </td>
                     <td>{{ viaje.conductor.apellido }}, {{ viaje.conductor.nombre }}</td>
                     <td>{{ viaje.lugar_origen.nombre }}</td>

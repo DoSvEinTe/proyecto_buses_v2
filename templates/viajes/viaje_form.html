@@ -129,20 +129,6 @@
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-12 mb-3">
-                            <label for="{{ form.pasajeros_confirmados.id_for_label }}" class="form-label">
-                                <i class="fas fa-users me-2"></i>Pasajeros Confirmados <span class="text-danger">*</span>
-                            </label>
-                            {{ form.pasajeros_confirmados }}
-                            {% if form.pasajeros_confirmados.errors %}
-                                <div class="text-danger small mt-1">
-                                    {{ form.pasajeros_confirmados.errors|first }}
-                                </div>
-                            {% endif %}
-                        </div>
-                    </div>
-
                     <div class="mb-3">
                         <label for="{{ form.observaciones.id_for_label }}" class="form-label">
                             <i class="fas fa-sticky-note me-2"></i>Observaciones (Opcional)

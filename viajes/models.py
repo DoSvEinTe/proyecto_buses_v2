@@ -14,7 +14,7 @@ class Viaje(models.Model):
         ('cancelado', 'Cancelado'),
     ]
     
-    bus = models.ForeignKey(Bus, on_delete=models.PROTECT, related_name='viajes')
+    bus = models.ForeignKey(Bus, on_delete=models.SET_NULL, null=True, blank=True, related_name='viajes')
     conductor = models.ForeignKey(Conductor, on_delete=models.PROTECT, related_name='viajes')
     lugar_origen = models.ForeignKey(Lugar, on_delete=models.PROTECT, related_name='viajes_origen')
     lugar_destino = models.ForeignKey(Lugar, on_delete=models.PROTECT, related_name='viajes_destino')
